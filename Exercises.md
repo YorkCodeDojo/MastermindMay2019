@@ -79,9 +79,16 @@ For example
 
     The combination  `Red Blue Yellow Blue` scored against the guess (g)  `Red Blue Yellow Black` would have a score of 3/1 and so would be removed.
 
-### 3c. Min-Max.   (Step 6 in Knuth's algorithm)
-This is the tricky bit!  Our set of possible combinations S should now contain a lot less than the original 1296 values.  
-By looking at these remaining combinations we need pick the next combination to try which will tell us the most information.
+
+### 3c Guessing
+For your next guess,  pick one of the remaining combinations in S at random.
+
+#### 3d Game
+Combine your solutions for the exercises 1a,  1b, 3a, 3b and 3c to create a game where you play against the computer.  
+The computer taking the role of the code breaker.
+
+### 3e. Min-Max.   (Step 6 in Knuth's algorithm)
+This is the tricky bit! In step 3c we picked a guess at random but we can do better by trying to pick the combination which will tell us the most information.
 
 * For each possible guess, that is, any unused code of the 1296 not just those in S, 
 calculate how many possibilities in S would be eliminated for each possible colored/white peg score. 
@@ -103,12 +110,8 @@ calculate the score of a guess by using "minimum eliminated" = "count of element
 
 * From the set of guesses with the maximum score, select one as the next guess, choosing a member of S whenever possible.
 
-### 3d Guessing
-If you can't get 3c working then don't worry.  Picking one of the remaining combinations at random will also work quite well. :-)
 
-#### 3e Game
-Combine your solutions for the exercises 1a,  1b, 3a, 3b and 3c to create a game where you play against the computer.  
-The computer taking the role of the code breaker.
+
 
 
 
